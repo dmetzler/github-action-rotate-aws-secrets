@@ -1,4 +1,4 @@
-name: 'Rotate AWS Access Keys'
+name: 'Rotate AWS Access Keys with environment secrets support'
 author: 'Nema Darban <nema.darban@gmail.com>'
 description: Github action that rotates the iam user tokens on a schedule
 runs:
