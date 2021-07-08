@@ -13,6 +13,11 @@ if 'GITHUB_ACCESS_KEY_NAME' in os.environ:
 if 'GITHUB_SECRET_KEY_NAME' in os.environ:
     secret_key_name = os.environ['GITHUB_SECRET_KEY_NAME']
 
+if 'GITHUB_ENVIRONMENT' in os.environ:
+    environment = os.environ['GITHUB_ENVIRONMENT']
+    access_key_name = f"{environment}/{access_key_name}"
+    secret_key_name = f"{environment}/{secret_key_name}"
+
 # sets creds for boto3
 iam = boto3.client(
     'iam',
